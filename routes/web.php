@@ -24,3 +24,8 @@ Route::get('/contact', 'about@contact');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/members', function () {
+    return view('member');
+});
+Route::post('/home', 'MemberController@store');
